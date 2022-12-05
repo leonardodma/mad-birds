@@ -18,9 +18,14 @@ public class Bird : MonoBehaviour
 
     // Line
     public LineRenderer[] lineRenderer;
+
     public Transform[] stripPositions;
+
     public Transform center;
+
     public Transform idlePosition;
+
+    public AudioSource birdSoundRelease;
 
     void Start()
     {
@@ -57,13 +62,13 @@ public class Bird : MonoBehaviour
                 rb.position = mousePosition;
             }
             SetStrips(rb.position);
-        } 
+        }
 
-        if (isReleased) {
+        if (isReleased)
+        {
             // erase line
             lineRenderer[0].positionCount = 0;
             lineRenderer[1].positionCount = 0;
-
         }
     }
 
@@ -84,15 +89,18 @@ public class Bird : MonoBehaviour
     IEnumerator Release()
     {
         yield return new WaitForSeconds(releaseTime);
+        birdSoundRelease.Play();
         GetComponent<SpringJoint2D>().enabled = false;
         this.enabled = false;
     }
 
-    void ResetStrips(){
+    void ResetStrips()
+    {
         SetStrips(idlePosition.position);
     }
 
-    void SetStrips(Vector3 targetPosition){
+    void SetStrips(Vector3 targetPosition)
+    {
         lineRenderer[0].SetPosition(1, targetPosition);
         lineRenderer[1].SetPosition(1, targetPosition);
     }
