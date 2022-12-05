@@ -647,8 +647,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 278}
-  m_SizeDelta: {x: 884.2966, y: 356.1868}
+  m_AnchoredPosition: {x: 0.0016479, y: 274}
+  m_SizeDelta: {x: 1105.9377, y: 356.1868}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &399106500
 MonoBehaviour:
@@ -670,7 +670,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Mad Birds
+  m_text: Mad Chicken
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 81f6f510cbc074d35ac732daba86fe7c, type: 2}
   m_sharedMaterial: {fileID: 2075386497882441409, guid: 81f6f510cbc074d35ac732daba86fe7c, type: 2}
@@ -2721,7 +2721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9eaa8f2f455df47f7a6f60096e13e0ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeListener: {fileID: 0}
+  volumeListener: {fileID: 1644434853}
 --- !u!4 &1959706222
 Transform:
   m_ObjectHideFlags: 0
