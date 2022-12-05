@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 
     private GameObject[] boxes;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +30,9 @@ public class GameManager : MonoBehaviour
         if (enemys.Length == 0)
         {
             Debug.Log("You Win!");
+            PlayerPrefs.SetInt("levelReached", PlayerPrefs.GetInt("levelReached", 1) + 1);
+            // load level menu
+            SceneManager.LoadScene("LevelMenu");
         }
 
         // Check if bird is out of bounds, not moving, and there are still enemys
