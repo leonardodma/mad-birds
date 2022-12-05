@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
 
     private GameObject[] enemys;
 
+    private GameObject[] boxes;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,4 +45,6 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
+
+    
 }
