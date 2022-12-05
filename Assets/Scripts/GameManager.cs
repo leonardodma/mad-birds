@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         bird = GameObject.FindGameObjectWithTag("Bird");
+        // set level to 1
+        PlayerPrefs.SetInt("levelReached", 1);
     }
 
     // Update is called once per frame
@@ -30,7 +32,9 @@ public class GameManager : MonoBehaviour
         if (enemys.Length == 0)
         {
             Debug.Log("You Win!");
-            PlayerPrefs.SetInt("levelReached", PlayerPrefs.GetInt("levelReached", 1) + 1);
+            // get current level 
+            int level = SceneManager.GetActiveScene().buildIndex - 1;
+            PlayerPrefs.SetInt("levelReached", level + 1);
             // load level menu
             SceneManager.LoadScene("LevelMenu");
         }

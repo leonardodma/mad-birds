@@ -9,6 +9,12 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private Slider volumeListener;
 
     void Start(){
+        if (PlayerPrefs.HasKey("levelReached")){
+            PlayerPrefs.SetInt("levelReached", 1);
+        } else {
+            PlayerPrefs.SetInt("levelReached", 1);
+        }
+        
         if(!PlayerPrefs.HasKey("volume")){
             PlayerPrefs.SetFloat("volume", 1f);
             ChangeVolume();
