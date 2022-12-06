@@ -5,8 +5,6 @@ using UnityEngine;
 public class Ice : MonoBehaviour
 {
     // Start sound effect when box is pushed
-    public AudioSource breakSound;
-
     public float health = 2f;
 
     public GameObject deathEffect;
@@ -15,14 +13,12 @@ public class Ice : MonoBehaviour
     {
         if (collision.relativeVelocity.magnitude > health)
         {
-            // call couritine to destroy box
-            StartCoroutine(DestroyBox());
+            DestroyBox();
         }
     }
 
-    IEnumerator DestroyBox()
+    void DestroyBox()
     {
-        breakSound.Play();
         Destroy (gameObject);
     }
 }

@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
         boxes = GameObject.FindGameObjectsWithTag("Box");
         if (enemys.Length == 0)
         {
-            Debug.Log("You Win!");
+            // Debug.Log("You Win!");
             // get current level 
             int level = SceneManager.GetActiveScene().buildIndex - 1;
             PlayerPrefs.SetInt("levelReached", level + 1);
