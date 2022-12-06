@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 8503910678072470452}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.9, y: -3.96, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 0.25}
+  m_LocalScale: {x: 0.30944, y: 0.30544, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -239,5 +239,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a09f8e4b9f78e944bd01f40fdad2945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 6
+  health: 4
   deathEffect: {fileID: 4684979724551471721, guid: a442789bc904a49459d4d47eca9946fd, type: 3}

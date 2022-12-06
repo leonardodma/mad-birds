@@ -28,6 +28,13 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         CheckWin();
+
+        // check if key b was pressed
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            // load level menu
+            SceneManager.LoadScene("LevelMenu");
+        }
     }
 
     void CheckWin()
